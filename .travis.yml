@@ -11,5 +11,6 @@ before_script:
   - 'npm install'
   - 'grunt wiredep'
   - 'grunt build'
+script: grunt test
 after_success:
   - firebase deploy --token=${FIREBASE_API_TOKEN}
